@@ -13,4 +13,13 @@ int main() {
 
   cout << "The derived key from the PBKDF2 algorithm" << endl;
   cout << Crypto::hex(Crypto::pbkdf2("Password", "Salt")) << endl;
+  
+  cout << "The derived key from the MD5 algorithm" << endl;
+  cout << Crypto::hex(Crypto::md5("Password")) <<endl;
+  
+  cout << "The derived key from the SHA256 algorithm" << endl;
+  cout << Crypto::hex(Crypto::sha256("Password",2)) <<endl;
+
+  cout << "The derived key from the SHA512 algorithm" << endl;
+  cout << Crypto::hex(Crypto::sha512("Password",2)) <<endl;
 }
